@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <opencv/highgui.h>
+#include <opencv/cv.h>
 #include <dirent.h>
 
 
-//gcc -Wall test.c `pkg-config --libs --cflags opencv` -o h
+//gcc -Wall fullcode.c `pkg-config --libs --cflags opencv` -o h
 
 
 char* concat(char *s1, char *s2)
@@ -101,10 +102,8 @@ char* concat(char *s1, char *s2)
 
 					// affichage
 					cvShowImage("test2",dst);
-					cvMoveWindow("test2", 0, 0);
 					cvNamedWindow("test1", CV_WINDOW_AUTOSIZE);
 					cvShowImage("test1",dst2);
-					cvMoveWindow("test1", dst->width+65, 0);	
 	
 					cvWaitKey(0);
 			
